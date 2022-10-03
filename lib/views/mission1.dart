@@ -14,7 +14,7 @@ class _Mission1PageState extends State<Mission1Page> {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: const Text("Mission 1"),
+              title: const Text("Mission 1 - Scenery"),
             ),
             body: SizedBox(
               width: double.infinity,
