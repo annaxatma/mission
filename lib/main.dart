@@ -11,7 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-    home: Mission1Page(),
+        debugShowCheckedModeBanner: false,
+        title: 'Mission Widget',
+        theme: ThemeData(
+        primarySwatch: Colors.blue,
+        ),
+
+        initialRoute: '/',
+        routes: {
+        '/': (context) => Mission1Page(),
+        Mission2Page.routeName: (context) => Mission2Page(),
+        },
     );
   }
 }

@@ -62,16 +62,61 @@ class _Mission1PageState extends State<Mission1Page> {
                     Container(
                       alignment: Alignment.topRight,
                       margin: const EdgeInsets.only(right: 15, top: 15),
-                      child: FloatingActionButton(
-                          mini: true,
-                          onPressed: () {
-                            liked();
-                          },
-                          child: _isFavorite 
-                              ? Icon(Icons.favorite, color: Colors.red)
-                              : Icon(Icons.favorite_border_outlined)
+                      child: Column(
+                      children: [
+                        FloatingActionButton(
+                            mini: true,
+                            onPressed: () {
+                              liked();
+                            },
+                            child: _isFavorite
+                                ? Icon(Icons.favorite, color: Colors.red)
+                                : Icon(Icons.favorite_border_outlined)
+                        ),
+                      ],
+                      )
+                    ),
+                    Container(
+                      alignment: Alignment.bottomRight,
+                      margin: const EdgeInsets.only(bottom: 15, right: 15),
+                      child: ElevatedButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, Mission2Page.routeName);
+                        },
+                        child: Text("Book Place"),
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(color: Colors.blueAccent),
+                                )
+                            )
+                        )
                       ),
                     )
+
+                    // Container(
+                    //   height: 60,
+                    //   width: 100,
+                    //   decoration: const BoxDecoration(
+                    //     gradient: LinearGradient(
+                    //         colors: [
+                    //           Color.fromARGB(255, 92, 196, 255),
+                    //           Color.fromARGB(255, 182, 244, 255),
+                    //         ],
+                    //         begin: FractionalOffset(0.0, 0.0),
+                    //         end: FractionalOffset(1.0, 0.0),
+                    //         stops: [0.0, 1.0],
+                    //         tileMode: TileMode.clamp),
+                    //   ),
+                    //   alignment: Alignment.bottomRight,
+                    //   margin: const EdgeInsets.only(right: 15, bottom: 15),
+                    //   child: Column(
+                    //     children: [
+                    //
+                    //     ],
+                    //   )
+                    // )
                   ],
               )
             )
